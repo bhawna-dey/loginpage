@@ -25,7 +25,7 @@ app.post('/form', (req, res) =>{
     res.send(`User login sucessful: Username: ${username} Password:${password}`)
 }
      else {
-        res.status({ status: 401 }).json({ message:'Unauthorized user' });
+        return res.status(401).send('Unauthorized user!');
 }
 });
 
